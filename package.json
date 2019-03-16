@@ -1,0 +1,26 @@
+{
+  "name": "mpvue-process",
+  "version": "0.0.1",
+  "description": "mpvue小程序常用工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zengjindong",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/joindn/mpvue-process.git"
+  },
+  "keywords": [
+    "mpvue",
+    "utils",
+    "request",
+    "auth",
+    "tools"
+  ],
+  "bugs": {
+    "url": "https://github.com/joindn/mpvue-process/issues"
+  },
+  "homepage": "https://github.com/joindn/mpvue-process#readme"
+}
