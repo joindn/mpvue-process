@@ -36,6 +36,14 @@ this.setStore('token',xxxxxx)
 const res = await this.request('api1', 'GET', {}, true)
 不需要转loading的
 const res = await this.request('api2', 'GET', {})
-
 this.request('api3', 'GET', {}).then(resp=>{console.log(resp)})
+自定义header
+const res = await this.request('api2', 'GET', {}, false, headers)
+本请求会自动封装如下header
+{'Content-Type': 'application/json', 'Authorization': 'Token ' + getStore('token')}
+```
+###### 缓存
+```
+this.setStore('key',value,1*24*60*60) // 缓存一天,默认2天
+this.getStore('key')
 ```
