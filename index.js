@@ -80,7 +80,7 @@ install(Vue, options) {
     })
   }
   Vue.prototype.navigateTo = obj => {
-    let path = obj.url.split('?')[0]
+    let path = obj.url.split('?')[0].replace('..', '/pages')
     const isAuthPage = options.pageAuth.indexOf(path)
     if (isAuthPage === -1 || getStore('token')) {
       mpvue.navigateTo(obj)
