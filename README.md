@@ -47,22 +47,3 @@ const res = await this.request('api2', 'GET', {}, false, headers)
 this.setStore('key',value,1*24*60*60) // 缓存一天,默认2天
 this.getStore('key')
 ```
-
-###### 变通解决slot传值问题
-```
-基础库 2.2.3以上
-原理:通过页面中转
-全局混入了slotpasm方法
-在父组件中调用
-const obj = {slotkey: 'celldata', slotval: this.celldata}
-this.$emit('slotpasm', obj)
-在页面中监听slotpasm方法
-<ListView @slotpasm="slotpasm">
-          <CellWork v-for="cell in celldata" 
-                    :key="cell.id" 
-                    @click.stop="clickCell(cell.id)"
-                    :celldata="cell">
-          </CellWork>
-</ListView>
-子组件中celldata即可获取到值
-```
