@@ -95,7 +95,9 @@ install(Vue, options) {
     },
     methods: {
       slotpasm (obj) {
-        this[obj.slotkey] = obj.slotval
+        mpvue.nextTick(() => {
+          this[obj.slotkey] = obj.slotval
+        })
       }
     }
   })

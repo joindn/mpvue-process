@@ -1,6 +1,6 @@
 {
   "name": "mpvue-process",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "mpvue小程序常用工具",
   "main": "index.js",
   "scripts": {
