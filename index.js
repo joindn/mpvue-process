@@ -92,6 +92,11 @@ install(Vue, options) {
   Vue.mixin({
     onShow() {
       Vue.prototype.isAuthed = isAuthed()
+    },
+    methods: {
+      slotpasm (obj) {
+        this[obj.slotkey] = obj.slotval
+      }
     }
   })
 
